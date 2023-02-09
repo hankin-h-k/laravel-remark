@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateRemarksTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('remarks', function (Blueprint $table) {
+            $table->id();
+            $table->string('remarkable_id')->nullable();
+            $table->string('remarkable_type')->nullable();
+            $table->index(['remarkable_id', 'remarkable_type']);
+            $table->string('remarked_id')->nullable();
+            $table->string('remarked_type')->nullable();
+            $table->index(['remarked_id', 'remarked_type']);
+            $table->longText('content')->nullable();
+            $table->text('pics')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('remarks');
+    }
+}

@@ -4,7 +4,8 @@
     "description": "Just another remark system for your laravel project",
     "keywords": [
         "hankin",
-        "laravel-remark"
+        "laravel-remark",
+        "remark"
     ],
     "homepage": "https://github.com/hankin-h-k/laravel-remark",
     "license": "MIT",
@@ -15,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^8.0.25"
+
     },
     "autoload": {
         "psr-4": {

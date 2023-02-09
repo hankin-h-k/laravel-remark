@@ -4,7 +4,7 @@ namespace Hankin\LaravelRemark;
 
 use Illuminate\Support\ServiceProvider;
 
-class RemarkSerivceProvider extends ServiceProvider
+class RemarkServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
